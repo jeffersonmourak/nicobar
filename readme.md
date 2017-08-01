@@ -1,5 +1,8 @@
 # nicobar
-> Javascript package for theming layouts
+
+> Javascript package for theming layouts.
+
+[![NPM Version](https://img.shields.io/npm/v/nicobar.svg)](https://www.npmjs.org/package/nicobar)
 
 ## Install
 Make sure you have `node` and `npm` installed.
