@@ -37,4 +37,13 @@ class Nicobar {
   }
 }
 
-window.nicobar = new Nicobar();
+let nic = new Nicobar();
+
+if (window) {
+  window.nicobar = nic;
+} else {
+  global.nicobar = nic;
+}
+
+export default nic;
+module.exports = nic;
