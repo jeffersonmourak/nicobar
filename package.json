@@ -1,0 +1,25 @@
+{
+  "name": "nicobar",
+  "version": "0.1.0",
+  "description": "Javascript package for theming layouts",
+  "main": "dist/nicobar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonmourak/nicobar.git"
+  },
+  "keywords": [
+    "nicobar",
+    "theme",
+    "theming",
+    "css"
+  ],
+  "author": "jeffersonmourak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffersonmourak/nicobar/issues"
+  },
+  "homepage": "https://github.com/jeffersonmourak/nicobar#readme"
+}
