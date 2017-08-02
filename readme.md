@@ -51,6 +51,7 @@ class MyComponent extends react {
     ...
   }
 }
+```
 when it is done you can run nicobar on your component when you want.
 
 ```javascript
