@@ -3,6 +3,7 @@
 > Javascript package for theming layouts.
 
 [![NPM Version](https://img.shields.io/npm/v/nicobar.svg)](https://www.npmjs.org/package/nicobar)
+[![Build Status](https://travis-ci.org/jeffersonmourak/nicobar.svg?branch=master)](https://travis-ci.org/jeffersonmourak/nicobar)
 
 ## Install
 Make sure you have `node` and `npm` installed.

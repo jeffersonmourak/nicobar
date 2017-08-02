@@ -1,13 +1,14 @@
 {
   "name": "nicobar",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Javascript package for theming layouts",
   "main": "dist/nicobar.js",
   "scripts": {
     "webpack:dev": "webpack -d",
     "webpack:watch": "webpack --watch",
     "webpack:prod": "webpack -p",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -26,13 +27,27 @@
   },
   "homepage": "https://github.com/jeffersonmourak/nicobar#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.24.1",
+    "jasmine": "^2.7.0",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-coverage": "1.1.1",
+    "karma-jasmine": "1.1.0",
+    "karma-junit-reporter": "1.2.0",
+    "karma-ng-html2js-preprocessor": "1.0.0",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "^2.0.4",
     "lodash": "^4.17.4",
+    "phantomjs-prebuilt": "2.1.14",
     "uglify-js": "^3.0.27",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "webpack-istanbul-plugin": "0.0.5"
   }
 }

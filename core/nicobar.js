@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import css from './css.helper';
-import element from './element.helper';
+import Css from './css.helper';
+import Element from './element.helper';
 
 class Nicobar {
   constructor() {
@@ -8,14 +8,14 @@ class Nicobar {
       header: document.querySelector('head')
     };
 
-    this::element.createStyle();
+    this::Element.createStyle();
     this.selectors = {};
   }
 
   render() {
     let styleString = Object.keys(this.selectors)
       .reduce( (styleStr, selector) => {
-        return styleStr += `${selector} { ${ css.fromObjToCss(this.selectors[selector]) } }`;
+        return styleStr += `${selector} { ${ Css.fromObjToCss(this.selectors[selector]) } }`;
       }, '');
 
     this.elements.styleElement.innerText = styleString;
@@ -25,7 +25,7 @@ class Nicobar {
     let selector;
 
     if (_.isElement(target)) {
-      selector = css.intelligentSelector(target);
+      selector = Css.intelligentSelector(target);
       target = [target];
     } else {
       selector = target;

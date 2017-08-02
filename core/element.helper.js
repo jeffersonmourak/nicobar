@@ -1,4 +1,4 @@
-import css from './css.helper';
+import Css from './css.helper';
 
 class Element {
   createStyle() {
