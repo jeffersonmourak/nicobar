@@ -1,4 +1,4 @@
-import Css from './Css.helper';
+import Css from './css.helper';
 import _ from 'lodash';
 
 describe('Css.helper.js', () => {
