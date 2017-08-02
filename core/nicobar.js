@@ -2,6 +2,8 @@ import _ from 'lodash';
 import Css from './css.helper';
 import Element from './element.helper';
 
+import ReactReplacer from './react-replacer';
+
 class Nicobar {
   constructor() {
     this.elements = {
@@ -19,6 +21,10 @@ class Nicobar {
       }, '');
 
     this.elements.styleElement.innerText = styleString;
+  }
+
+  init(instance, data = {}) {
+    return new ReactReplacer(instance, data);
   }
 
   set(target, data) {

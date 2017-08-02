@@ -25425,6 +25425,10 @@ var _element = __webpack_require__(116);
 
 var _element2 = _interopRequireDefault(_element);
 
+var _reactReplacer = __webpack_require__(303);
+
+var _reactReplacer2 = _interopRequireDefault(_reactReplacer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25437,7 +25441,7 @@ var Nicobar = function () {
       header: document.querySelector('head')
     };
 
-    _element2.default.createStyle.call(this);
+    _element2.default.createStyle.bind(this)();
     this.selectors = {};
   }
 
@@ -25451,6 +25455,13 @@ var Nicobar = function () {
       }, '');
 
       this.elements.styleElement.innerText = styleString;
+    }
+  }, {
+    key: 'init',
+    value: function init(instance) {
+      var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      return new _reactReplacer2.default(instance, data);
     }
   }, {
     key: 'set',
@@ -25480,7 +25491,7 @@ if (window) {
 } else {
   global.nicobar = nic;
 }
-
+console.log(nic);
 exports.default = nic;
 
 module.exports = nic;
@@ -25513,6 +25524,21 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ReactReplacer = function ReactReplacer(instance) {
+  _classCallCheck(this, ReactReplacer);
+
+  console.log('hello im react');
+};
 
 /***/ })
 /******/ ]);

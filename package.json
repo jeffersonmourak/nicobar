@@ -1,9 +1,10 @@
 {
   "name": "nicobar",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Javascript package for theming layouts",
-  "main": "dist/nicobar.js",
+  "main": "build/nicobar.js",
   "scripts": {
+    "postinstall": "babel core --out-dir build",
     "webpack:dev": "webpack -d",
     "webpack:watch": "webpack --watch",
     "webpack:prod": "webpack -p",
@@ -26,13 +27,16 @@
     "url": "https://github.com/jeffersonmourak/nicobar/issues"
   },
   "homepage": "https://github.com/jeffersonmourak/nicobar#readme",
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.14.0",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "devDependencies": {
     "jasmine": "^2.7.0",
     "jasmine-core": "^2.7.0",
     "karma": "^1.7.0",

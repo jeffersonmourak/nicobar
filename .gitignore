@@ -3,3 +3,4 @@ dev_test
 npm-debug.log
 dist/nicobar.js.map
 coverage/
+build/
