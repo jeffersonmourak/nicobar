@@ -11,6 +11,7 @@ Make sure you have `node` and `npm` installed.
 `$ npm install nicobar`
 
 ## Using
+### Vanilla JS
 Create or update your code as normal using your CSS, but if something have to be changed, use CSS Custom properties to set a variable.
 
 **Like this**
@@ -29,8 +30,34 @@ nicobar.set('.some-class', { background: '#0f0' });
 
 you can use it how many times you want.
 
-### nicobar.set(target, data)
+**nicobar.set(target, data)**
 the `set` method accept `String` or `HTMLElement` (for while).
+and the `data` is a `Object` with key as custom-property name.
+
+### React
+Inject nicobar in your project
+```javascript
+import nicobar from 'nicobar'
+// or
+const nicobar = require('nicobar');
+```
+then init on your component
+**Component Constructor**
+```javascript
+class MyComponent extends react {
+  constructor() {
+    ...
+    this.nicobar = nicobar.init(this);
+    ...
+  }
+}
+when it is done you can run nicobar on your component when you want.
+
+```javascript
+...
+this.nicobar.set({ variables });
+...
+```
 
 ## Contributing
 
