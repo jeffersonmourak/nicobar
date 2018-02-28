@@ -50,6 +50,15 @@ class Nicobar {
       target = document.querySelectorAll(target);
     }
 
+    target.forEach( element => {
+      let classNames = element.className.split(' '),
+          elClassName = selector.replace('.', '');
+
+      if (!classNames.includes(elClassName)) {
+        element.className = `${elClassName} ${element.className}`
+      }
+    } );
+
     this.selectors[selector] = data;
     this.render();
   }
