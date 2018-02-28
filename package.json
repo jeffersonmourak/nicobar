@@ -1,6 +1,6 @@
 {
   "name": "nicobar",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Javascript package for theming layouts",
   "main": "build/nicobar.js",
   "scripts": {
