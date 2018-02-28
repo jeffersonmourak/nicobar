@@ -51,6 +51,7 @@ class MyComponent extends React.Component {
     </Nicobar>
   }
 }
+```
 
 when it is done you can only change the property `style` and everything will run as expected.
 
