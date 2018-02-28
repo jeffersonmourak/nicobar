@@ -1,37 +1,49 @@
 import _ from 'lodash';
-import Css from './css.helper';
-import Element from './element.helper';
-
-import ReactReplacer from './react-replacer';
+import CSS from './CSS.helper';
+import Component from './Component';
+import React from 'react';
+import { render } from 'react-dom';
 
 class Nicobar {
   constructor() {
     this.elements = {
-      header: document.querySelector('head')
+      header: document.head,
+      styleElement: this.createStyleElement()
     };
 
-    this::Element.createStyle();
     this.selectors = {};
+  }
+
+  createStyleElement() {
+    let styleElement = document.createElement('style');
+
+    document.head.appendChild(styleElement);
+
+    return styleElement;
   }
 
   render() {
     let styleString = Object.keys(this.selectors)
       .reduce( (styleStr, selector) => {
-        return styleStr += `${selector} { ${ Css.fromObjToCss(this.selectors[selector]) } }`;
+        return styleStr += `${selector} { ${ CSS.fromObjToCss(this.selectors[selector]) } }`;
       }, '');
 
     this.elements.styleElement.innerText = styleString;
   }
 
-  init(instance, data = {}) {
-    return new ReactReplacer(instance, data);
+  get Nicobar() {
+    Component.defaultProps = {
+      nicobarInstance: this
+    };
+
+    return Component;
   }
 
   set(target, data) {
     let selector;
 
     if (_.isElement(target)) {
-      selector = Css.intelligentSelector(target);
+      selector = CSS.intelligentSelector(target);
       target = [target];
     } else {
       selector = target;
@@ -43,13 +55,13 @@ class Nicobar {
   }
 }
 
-let nic = new Nicobar();
+let nicobar = new Nicobar();
 
 if (window) {
-  window.nicobar = nic;
+  window.nicobar = nicobar;
 } else {
-  global.nicobar = nic;
+  global.nicobar = nicobar;
 }
 
-export default nic;
-module.exports = nic;
+export default nicobar;
+module.exports = nicobar;

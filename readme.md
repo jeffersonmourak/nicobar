@@ -1,4 +1,4 @@
-# nicobar
+# Nicobar
 
 > Javascript package for theming layouts.
 
@@ -12,7 +12,7 @@ Make sure you have `node` and `npm` installed.
 
 ## Using
 ### Vanilla JS
-Create or update your code as normal using your CSS, but if something have to be changed, use CSS Custom properties to set a variable.
+Create or update your code as normal using your CSS, but if something has to change, use CSS Custom properties to set a variable.
 
 **Like this**
 ```css
@@ -37,28 +37,22 @@ and the `data` is a `Object` with key as custom-property name.
 ### React
 Inject nicobar in your project
 ```javascript
-import nicobar from 'nicobar'
+import { Nicobar } from 'nicobar'
 // or
-const nicobar = require('nicobar');
+const Nicobar = require('nicobar').Nicobar;
 ```
 then init on your component
 **Component Constructor**
 ```javascript
-class MyComponent extends react {
-  constructor() {
-    ...
-    this.nicobar = nicobar.init(this);
-    ...
+class MyComponent extends React.Component {
+  render() {
+    return <Nicobar style={obj}>
+      ...
+    </Nicobar>
   }
 }
-```
-when it is done you can run nicobar on your component when you want.
 
-```javascript
-...
-this.nicobar.set({ variables });
-...
-```
+when it is done you can only change the property `style` and everything will run as expected.
 
 ## Contributing
 

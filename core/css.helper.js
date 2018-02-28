@@ -1,4 +1,3 @@
-import Element from './element.helper';
 import _ from 'lodash';
 
 class CSS {
@@ -21,7 +20,6 @@ class CSS {
       return `#${element.id}`;
     } else if (!selector) {
       selector = this.getClassHash();
-      this::Element.setElementClass(element, selector);
     }
     return `.${selector}`;
   }
