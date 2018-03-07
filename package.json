@@ -4,13 +4,13 @@
   "description": "Javascript package for theming layouts",
   "main": "build/nicobar.js",
   "scripts": {
-    "postinstall": "babel core --out-dir build",
+    "postinstall": "babel core/*.js --out-dir build",
     "webpack:dev": "webpack -d",
     "webpack:watch": "webpack --watch",
     "dev": "webpack-dev-server",
     "webpack:prod": "webpack -p",
     "webpack": "webpack",
-    "test": "./node_modules/.bin/karma start karma.conf.js"
+    "test": "node_modules/.bin/jasmine build/core/*.spec.js"
   },
   "repository": {
     "type": "git",

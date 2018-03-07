@@ -1,6 +1,6 @@
 const webpackConfig = require('./webpack.config.js');
 const path = require('path');
-var APP_DIR = path.resolve(__dirname, 'core/');
+var APP_DIR = path.resolve(__dirname, 'build/');
 module.exports = function(config) {
   config.set({
     basePath: APP_DIR,
