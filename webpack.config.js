@@ -29,7 +29,21 @@ var config = {
         include: /\.min\.js$/,
         minimize: true
       }),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.LoaderOptionsPlugin({
+        test: /\.js$/,
+        options: {
+          rules: [
+            {
+              exclude:/(node_modules)/,
+              loader:"babel-loader",
+              query:{
+                presets:["env"]
+              }
+            }
+          ]
+        }
+      })
     ],
     module : {
         loaders : [
