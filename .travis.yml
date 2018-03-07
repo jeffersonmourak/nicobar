@@ -3,3 +3,8 @@ node_js:
   - "9.5.0"
 script:
   - "yarn test"
+
+after_success:
+  - git clone git@github.com:jeffersonmourak/nicobar.wiki.git wiki
+  - node docsBuilder.js
+  - cd wiki && git add --all && git commit -m "Updating From Travis" && git push -u origin master

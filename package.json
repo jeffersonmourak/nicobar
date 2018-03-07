@@ -40,8 +40,10 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "glob": "^7.1.2",
     "jasmine": "^2.7.0",
     "jasmine-core": "^2.7.0",
+    "jsdoc-to-markdown": "^4.0.1",
     "karma": "^1.7.0",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-coverage": "1.1.1",
