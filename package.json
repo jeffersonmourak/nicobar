@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server",
     "webpack:prod": "webpack -p",
     "webpack": "webpack",
-    "test": "karma start karma.conf.js"
+    "test": "./node_modules/.bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
