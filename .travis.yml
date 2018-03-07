@@ -5,6 +5,7 @@ install:
   - npm i -g yarn && yarn install
 
 script:
+  - "yarn postinstall" 
   - "yarn test"
 
 after_success:
