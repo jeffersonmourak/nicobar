@@ -6,10 +6,12 @@ module.exports = function(config) {
     basePath: APP_DIR,
     frameworks: ['jasmine'],
     preprocessors: {
+      '**/*.js': ['webpack'],
       '**/*.spec.js': ['webpack'],
     },
     files: [
       '../node_modules/babel-polyfill/dist/polyfill.js',
+      '**/*.js',
       '**/*.spec.js',
     ],
     singleRun: true,
