@@ -7,12 +7,10 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
     preprocessors: {
       '**/*.js': ['webpack'],
-      '**/*.spec.js': ['webpack'],
     },
     files: [
       '../node_modules/babel-polyfill/dist/polyfill.js',
       '**/*.js',
-      '**/*.spec.js',
     ],
     singleRun: true,
     port: 9876,
