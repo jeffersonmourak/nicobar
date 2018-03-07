@@ -42,7 +42,7 @@ import { Nicobar } from 'nicobar'
 const Nicobar = require('nicobar').Nicobar;
 ```
 then init on your component
-**Component Constructor**
+**Wrapper Constructor**
 ```javascript
 class MyComponent extends React.Component {
   render() {
@@ -51,6 +51,27 @@ class MyComponent extends React.Component {
     </Nicobar>
   }
 }
+```
+Inject nicobar in your project
+```javascript
+import { component } from 'nicobar'
+// or
+const component = require('nicobar').component;
+```
+**using Component Builder**
+```javascript
+const MyElement = component('className', { styleObj }, MyOtherElement)
+// or
+const MyElement = component.div('className', { styleObj }) // <- You can use any dom element.
+
+class MyComponent extends React.Component {
+  render() {
+    return <div>
+      <MyElement/>
+    </div>
+  }
+}
+
 ```
 
 when it is done you can only change the property `style` and everything will run as expected.

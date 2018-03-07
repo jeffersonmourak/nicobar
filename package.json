@@ -7,6 +7,7 @@
     "postinstall": "babel core --out-dir build",
     "webpack:dev": "webpack -d",
     "webpack:watch": "webpack --watch",
+    "dev": "webpack-dev-server",
     "webpack:prod": "webpack -p",
     "webpack": "webpack",
     "test": "karma start karma.conf.js"
@@ -50,10 +51,14 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.4",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "phantomjs-prebuilt": "2.1.14",
     "uglify-js": "^3.0.27",
-    "webpack": "^3.4.1",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.2",
     "webpack-istanbul-plugin": "0.0.5"
   }
 }

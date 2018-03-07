@@ -22,7 +22,8 @@ var config = {
       new webpack.optimize.UglifyJsPlugin({
         include: /\.min\.js$/,
         minimize: true
-      })
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
     module : {
         loaders : [
@@ -32,6 +33,15 @@ var config = {
                 loader : 'babel-loader'
             }
         ]
+    },
+    devServer: {
+      contentBase: __dirname,
+      publicPath: '/dist/',
+      compress: true,
+      hot: true,
+      port: 3000,
+      watchContentBase: true,
+      open: true
     }
 };
 

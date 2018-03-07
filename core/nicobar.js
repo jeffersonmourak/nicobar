@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import CSS from './CSS.helper';
 import Component from './Component';
+import ContextComponent from './ContextComponent';
+import domElements from './utils/domElements';
 import React from 'react';
 import { render } from 'react-dom';
 
@@ -12,6 +14,18 @@ class Nicobar {
     };
 
     this.selectors = {};
+
+    Object.assign(this.component, this.preBuildDomElements());
+  }
+
+  preBuildDomElements() {
+    return domElements.reduce((obj, el) => {
+      obj[el] = (className, style) => {
+        return this.component(className, style, el)
+      };
+
+      return obj;
+    }, {})
   }
 
   createStyleElement() {
@@ -37,6 +51,21 @@ class Nicobar {
     };
 
     return Component;
+  }
+
+  component (className, style, element='div') {
+    const Nicobar = this.Nicobar,
+          NicobarComponent = (props) => {
+            return <ContextComponent
+            Nicobar={Nicobar}
+            className={className}
+            style={{ ...style }}
+            element={element}
+            properties={props}
+          />
+          };
+
+    return NicobarComponent;
   }
 
   set(target, data) {
