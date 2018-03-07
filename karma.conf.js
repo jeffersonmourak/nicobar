@@ -1,16 +1,16 @@
 const webpackConfig = require('./webpack.config.js');
 const path = require('path');
-var APP_DIR = path.resolve(__dirname, 'core/');
 module.exports = function(config) {
   config.set({
-    basePath: APP_DIR,
+    basePath: '',
     frameworks: ['jasmine'],
     preprocessors: {
-      '**/*.spec.js': ['webpack'],
+      'test/**/*.spec.js': ['webpack'],
     },
     files: [
       '../node_modules/babel-polyfill/dist/polyfill.js',
-      '**/*.spec.js',
+      {pattern: 'core/*.js', watched:true, served:false, included:false, nocache:false},
+      {pattern: 'tests/*.js',watched:true,served:true,included:true}
     ],
     singleRun: true,
     port: 9876,
