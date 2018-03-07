@@ -1,6 +1,6 @@
 import React from 'react';
-import CSS from './CSS.helper';
-import objectFilter from './utils/objectFilter';
+import CSS from 'Core/CSS.helper';
+import objectFilter from 'Utils/objectFilter';
 import _ from 'lodash';
 
 class ContextComponent extends React.Component {

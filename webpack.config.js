@@ -9,6 +9,12 @@ var BUILD_DIR = path.resolve(__dirname, 'dist/');
 var APP_DIR = path.resolve(__dirname, 'core/');
 
 var config = {
+    resolve: {
+      alias: {
+        Core: APP_DIR,
+        Utils: path.resolve(APP_DIR, 'utils')
+      }
+    },
     entry: {
       "nicobar": ['babel-polyfill' ,APP_DIR + '/nicobar.js'],
       "nicobar.min": ['babel-polyfill' ,APP_DIR + '/nicobar.js'],

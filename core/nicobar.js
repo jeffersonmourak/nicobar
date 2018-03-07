@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import CSS from './CSS.helper';
-import Component from './Component';
-import ContextComponent from './ContextComponent';
-import domElements from './utils/domElements';
+import CSS from 'Core/CSS.helper';
+import Component from 'Core/Component';
+import ContextComponent from 'Core/ContextComponent';
+import domElements from 'Utils/domElements';
 import React from 'react';
 import { render } from 'react-dom';
 
