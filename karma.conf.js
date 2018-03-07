@@ -1,11 +1,12 @@
 const webpackConfig = require('./webpack.config.js');
-
+const path = require('path');
+var APP_DIR = path.resolve(__dirname, 'core/');
 module.exports = function(config) {
   config.set({
-    basePath: 'core/',
+    basePath: APP_DIR,
     frameworks: ['jasmine'],
     preprocessors: {
-      '**/*.spec.js': ['webpack', 'coverage'],
+      '**/*.spec.js': ['webpack'],
     },
     files: [
       '../node_modules/babel-polyfill/dist/polyfill.js',
